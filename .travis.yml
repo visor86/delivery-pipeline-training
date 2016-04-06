@@ -4,13 +4,15 @@ node_js: '5'
 addons:
   postgresql: '9.4'
 before_script:
-  - bash install.sh
+- bash install.sh
 script:
-  - source env.sh && npm run test
+- source env.sh && npm run test
 notifications:
-  slack: 'i.chmykh:kfjTXFxdFQxyBbAJ0UtYVqOe#general'
+  slack: i.chmykh:kfjTXFxdFQxyBbAJ0UtYVqOe#general
 deploy:
-  app: pumpkin-tart-71750
   provider: heroku
   api_key:
-    secure: dPo5Cy1QTFxfj7MepK+NO8erzqKlNiGmQ9gUPLoEPWxy2ddtqWFQ5Z9be2C2ko1JFNoloxJiv6D7z3K9GqHIx+QDbAGsijFPsg+Um5EZjL8bPkL0khN67RTLjWqf/F8rPf6zSJcnG4SbXnQHq6TCHQWWlfsKK9RWresADe+Yx/tIYf4aRg3p4FwO20TUYV/PE7rif4IDK6vL4U0i26WgqmrWgEOezrm5I9L2CFMuk/cy9gnJPxAILOFkRvpfSFv/XAjtAs+lDM/C/DMi8uhq6Sq6rHTjsFKc8o7s4wLE+RYnV/QjBosXDDP9ljyFcfhYE4TTpGePp4vm6wBRU9BruPo9mNSEZ9cZ5EsHK0RLoCkw6PEIQfZm8IEgpzlpNGgyHnZ+STI2+y1Xhkj07bC7nDNE7U1FOxxASfeTGC+T57nbw/RHKQFCm5/7TvN69AU9QDUYrrfNT9TzAvKkpZaSlFAVHJPE2yTyKyBq3TkQDRxEtHXy6bBTm6a6/Qb7ZTdZxKYCNWGFBHW1o11MdZux0q2mNpp0rGkI8PBVkUTpPRbt5aGGsIsJxf6Vb6xc03Ie85h1tmbVk2EgI7Ejqpxx5uGWsyCaSgnncngamVQJ9etnloLc+oSQlQrgmxQxpKzV6T/aS37RSeWWDRb8wbvqwktsw2ZdY8ISnHpz8mildm8=
+    secure: PEwBlYgPqFqQnC099hWl6EaOFIfhxKVggRYSq4IN7LUX7BanevOu6v3Fi5pUz9U//fhP00e0QPDj7s1bAGP0GtSqXIKBiavpI27NNpcyKy3lTF4g0V0sh/WhHAeyNcELOcZ3bHEG+ap3Qzi4f5l7dUDPNwYnjPjrXql+bVrngJqw5IlTr8vEEwXKTebQ6AU4TKaxDnwf4MMpeiX/NlK6RK7quY5uXnzwkto4/rs5y6wLjZGnKhwFsywOenDqVF/IiwzHtLch9bbg05N7tf8KsKBQEsBTy4dk+IyqCTEmyVtmcIuFEqLAfbIVL+d/TdCHj4lqKKWfJcyADbsyeX0UlTcy4GKVOX52KM3GFHzTIJaO04lexuHR0B2802kQx8XGJh6kNhpjNXjvs1MYYiaIv1Xbc0Aa5Z+umhS1S/NWCiKDTXURlaxcYvHGrfvWSE1VWApkT3mCROqygPw+ssAqWLHyQZpY+akHDMaGR0OjTl1fHMJchx21o9V8X2L96R9XhdxmUQlbJcvt9+N5WTqRsCqfRM4WcC/oBWZGYtAAIFb09A241sLSZe1VmXidGFv1tINh7vUei2PsmTXLgX38i53Pb4FyAo+0Y6+BcksoW6rhmDHqvw9BugMIS3E0ukMTVw9vFXHstCvRQR1ko5LJN/OkHO56EM0pE1xadxMPLLY=
+  app: evening-sierra-54559
+  on:
+    repo: visor86/delivery-pipeline-training
