@@ -8,7 +8,7 @@ before_script:
 script:
 - source env.sh && npm run test
 notifications:
-  slack: i.chmykh:kfjTXFxdFQxyBbAJ0UtYVqOe#general
+  slack: devops-training-spb:kfjTXFxdFQxyBbAJ0UtYVqOe#general
 deploy:
   provider: heroku
   api_key:
